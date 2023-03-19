@@ -4,7 +4,7 @@ Membros e papéis
 
 Arthur: Fullstack
 João Vitor de Morais Rocha: Fullstack
-Renato: Fullstack
+Renato Polanczyk Resende: Fullstack
 Roberto: Fullstack
 
 Escopo (objetivo do sistema, principais features, etc)
