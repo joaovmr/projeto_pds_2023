@@ -2,7 +2,7 @@
 
 Membros e papéis
 
-Arthur: Fullstack
+Arthur Veloso Kuahara: Fullstack
 João Vitor de Morais Rocha: Fullstack
 Renato Polanczyk Resende: Fullstack
 Roberto: Fullstack
