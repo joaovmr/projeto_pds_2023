@@ -3,8 +3,11 @@
 Membros e papéis
 
 Arthur Veloso Kuahara: Fullstack
+
 João Vitor de Morais Rocha: Fullstack
+
 Renato Polanczyk Resende: Fullstack
+
 Roberto: Fullstack
 
 Escopo (objetivo do sistema, principais features, etc)
