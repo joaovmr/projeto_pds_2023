@@ -1,30 +1,26 @@
-# projeto_pds_2023
+# Projeto Calorie Tracker - PDS - 2023/1
 
-Membros e papéis
+## Membros e papéis
+- Arthur Veloso Kuahara: Fullstack
+- João Vitor de Morais Rocha: Fullstack
+- Renato Polanczyk Resende: Fullstack
+- Roberto Gomes Rosmaninho Neto: Fullstack
 
-Arthur Veloso Kuahara: Fullstack
+## Escopo (objetivo do sistema, principais features, etc)
 
-João Vitor de Morais Rocha: Fullstack
+### Objetivo:
+- Criar um Sistema de Contador de Calorias e Macronutrientes.
 
-Renato Polanczyk Resende: Fullstack
+### Features: 
+- Gráficos de Estatísticas de Consumos de Calorias.
+- Gráficos de Estatísticas de Consumos de Macronutrientes.
+- Sistema de Login.
+- Sistema de Registro.
+- Adição de Itens Consumidos.
 
-Roberto: Fullstack
-
-Escopo (objetivo do sistema, principais features, etc)
-
-Sistema de contador de calorias e macronutrientes.
-
-Features: 
-Gráficos de estatiscas de consumos de calorias
-Gráficos de estatiscas de consumos de macronutrientes
-Sistema de login
-Sistema de registro
-Adição de itens consumidos
-
-Tecnologias (LP, BD,etc)
-
-React
-Javascript
-HTML
-CSS
-Django
+### Tecnologias (LP, BD,etc)
+- React
+- Javascript
+- HTML
+- CSS
+- Python (Django)
