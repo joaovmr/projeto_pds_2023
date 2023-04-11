@@ -1,6 +1,7 @@
 # Projeto Calorie Tracker - PDS - 2023/1
 
 ## Membros e papéis
+
 - Arthur Veloso Kuahara: Fullstack
 - João Vitor de Morais Rocha: Fullstack
 - Renato Polanczyk Resende: Fullstack
@@ -9,9 +10,11 @@
 ## Escopo (objetivo do sistema, principais features, etc)
 
 ### Objetivo:
+
 - Criar um Sistema de Contador de Calorias e Macronutrientes.
 
-### Features: 
+### Features:
+
 - Gráficos de Estatísticas de Consumos de Calorias.
 - Gráficos de Estatísticas de Consumos de Macronutrientes.
 - Sistema de Login.
@@ -19,6 +22,7 @@
 - Adição de Itens Consumidos.
 
 ### Tecnologias (LP, BD,etc)
+
 - React
 - Javascript
 - HTML
@@ -39,7 +43,6 @@
 - Como usuário eu gostaria de desafiar meus amigos para uma competição.
 - Como usuário eu gostaria de ter visualizações diárias, semanais, mensais e anuais.
 - Como usuário eu gostaria de adicionar, editar, excluir, e visualizar perfis de amigos.
-
 - Como usuário eu gostaria de calcular e acompanhar meu IMC diário.
 
 ### Backlog da Sprint
@@ -68,3 +71,30 @@
     - Criar componente para inserir o limite diário
     - Criar lógica para somar as calorias registradas no dia e apresentar junto com o limite
     - Tornar possível atualizar o limite diário.
+- História 4: Como usuário eu gostaria de visualizar a proporção de calorias, proteínas e carboidratos eu consumo diariamente.
+    
+    Tarefas e responsáveis:
+    
+    - Criar componente de um gráfico de pizza para representar a proporção dos dados.
+    - Atualizar API para que o gráfico fique dinâmico e atualize a cada modificação na lista de refeições.
+- História 5: Como usuário eu gostaria de acompanhar a evolução do meu peso diariamente.
+    
+    Tarefas e responsáveis:
+    
+    - Criar página de gráficos na plataforma.
+    - Criar botão e rota para ligar a página principal à página de gráficos.
+    - Criar componente de gráfico com consulta das entradas de peso no banco de dados.
+    - Tornar o gráfico dinâmico para ser atualizado a cada modificação inserida pelo usuário no componente apropriado.
+- História 6: Como usuário eu gostaria de acompanhar a quantidade de calorias que eu consumo diariamente.
+    
+    Tarefas e responsáveis:
+    
+    - Criar um segundo componente de gráfico na página de gráficos referenciando as entradas de calorias totais no banco de dados.
+    - Tornar o gráfico dinâmico para ser atualizado a cada modificação inserida pelo usuário no componente apropriado.
+- História 7: Como usuário eu gostaria de establecer atualizar um objetivo de peso.
+    
+    Tarefas e responsáveis:
+    
+    - Criar um componente de entrada de texto (número) para atualizar o campo de objetivo de peso.
+    - Criar um componente de visualização do objetivo de peso.
+    - Conectar o componente ao backend para mostrar o valor atual presente no banco de dados.
