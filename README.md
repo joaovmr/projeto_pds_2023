@@ -104,3 +104,6 @@
     - Criar um componente de entrada de texto (número) para atualizar o campo de objetivo de peso.
     - Criar um componente de visualização do objetivo de peso.
     - Conectar o componente ao backend para mostrar o valor atual presente no banco de dados.
+
+
+Figma: https://www.figma.com/file/pygWS33qHgJxosSavF5Wvh/Figma-Sprint-1?node-id=103%3A179&t=FiWYzXplnfhlxxCY-1
