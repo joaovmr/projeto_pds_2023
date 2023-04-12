@@ -61,7 +61,7 @@
     Tarefas e responsáveis:
     
     - Criar página inicial.
-    - Criar campos para Café da Manhã, Almoço, Café da Tarde, Jantar.
+    - Criar campos para Café da Manhã, Almoço, Café da Tarde, Jantar, Cheat Meal.
     - Criar componentes no campos acima para inserir: Nome, Calorias Totais, Gordura, Carboidratos e Proteínas.
     - Criar uma lista desses componentes para diferentes entradas por refeição.
     - Criar métodos para modificar e excluir uma entrada.
