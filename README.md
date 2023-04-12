@@ -47,16 +47,17 @@
 
 ### Backlog da Sprint
 
-- História 1: Como usuário eu gostaria ter acesso à plataforma por meio de login e senha.
-    
+- História 1: Como usuário eu gostaria ter acesso à plataforma por meio de login e senha. [Roberto]
+
     Tarefas e responsáveis:
     
     - Criar banco de dados de usuários.
     - Criar página de cadastro.
     - Criar página de login.
     - Criar sistema de autenticação.
-- História 2: Como usuário eu gostaria de registrar as informações mais importantes de cada refeição que eu faço durante o dia.
-    
+
+- História 2: Como usuário eu gostaria de registrar as informações mais importantes de cada refeição que eu faço durante o dia. [João]
+
     Tarefas e responsáveis:
     
     - Criar página inicial.
@@ -64,35 +65,40 @@
     - Criar componentes no campos acima para inserir: Nome, Calorias Totais, Gordura, Carboidratos e Proteínas.
     - Criar uma lista desses componentes para diferentes entradas por refeição.
     - Criar métodos para modificar e excluir uma entrada.
-- História 3: Como usuário eu gostaria de estabelecer limite de calorias diário.
-    
+
+- História 3: Como usuário eu gostaria de estabelecer limite de calorias diário. [Renato]
+
     Tarefas e responsáveis:
     
     - Criar componente para inserir o limite diário
     - Criar lógica para somar as calorias registradas no dia e apresentar junto com o limite
     - Tornar possível atualizar o limite diário.
-- História 4: Como usuário eu gostaria de visualizar a proporção de calorias, proteínas e carboidratos eu consumo diariamente.
-    
+
+- História 4: Como usuário eu gostaria de visualizar a proporção de calorias, proteínas e carboidratos eu consumo diariamente. [Renato]
+
     Tarefas e responsáveis:
     
     - Criar componente de um gráfico de pizza para representar a proporção dos dados.
     - Atualizar API para que o gráfico fique dinâmico e atualize a cada modificação na lista de refeições.
-- História 5: Como usuário eu gostaria de acompanhar a evolução do meu peso diariamente.
-    
+
+- História 5: Como usuário eu gostaria de acompanhar a evolução do meu peso diariamente. [Arthur]
+
     Tarefas e responsáveis:
     
     - Criar página de gráficos na plataforma.
     - Criar botão e rota para ligar a página principal à página de gráficos.
     - Criar componente de gráfico com consulta das entradas de peso no banco de dados.
     - Tornar o gráfico dinâmico para ser atualizado a cada modificação inserida pelo usuário no componente apropriado.
-- História 6: Como usuário eu gostaria de acompanhar a quantidade de calorias que eu consumo diariamente.
-    
+
+- História 6: Como usuário eu gostaria de acompanhar a quantidade de calorias que eu consumo diariamente. [Roberto]
+
     Tarefas e responsáveis:
     
     - Criar um segundo componente de gráfico na página de gráficos referenciando as entradas de calorias totais no banco de dados.
     - Tornar o gráfico dinâmico para ser atualizado a cada modificação inserida pelo usuário no componente apropriado.
-- História 7: Como usuário eu gostaria de establecer atualizar um objetivo de peso.
-    
+
+- História 7: Como usuário eu gostaria de establecer atualizar um objetivo de peso. [Renato]
+
     Tarefas e responsáveis:
     
     - Criar um componente de entrada de texto (número) para atualizar o campo de objetivo de peso.
