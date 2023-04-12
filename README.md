@@ -78,14 +78,14 @@
 
     Tarefas e responsáveis:
     
+    - Encontrar e adicionar uma biblioteca que possua componentes de gráficos.
     - Criar componente de um gráfico de pizza para representar a proporção dos dados.
-    - Atualizar API para que o gráfico fique dinâmico e atualize a cada modificação na lista de refeições.
 
 - História 5: Como usuário eu gostaria de acompanhar a evolução do meu peso diariamente. [Arthur]
 
     Tarefas e responsáveis:
     
-    - Criar página de gráficos na plataforma.
+    - Criar página de estatisticas do usuário na plataforma.
     - Criar botão e rota para ligar a página principal à página de gráficos.
     - Criar componente de gráfico com consulta das entradas de peso no banco de dados.
     - Tornar o gráfico dinâmico para ser atualizado a cada modificação inserida pelo usuário no componente apropriado.
