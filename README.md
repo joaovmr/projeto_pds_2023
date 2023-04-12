@@ -60,6 +60,7 @@
 
     Tarefas e responsáveis:
     
+    - Criar tabela de dados para alimentos.
     - Criar página inicial.
     - Criar campos para Café da Manhã, Almoço, Café da Tarde, Jantar, Cheat Meal.
     - Criar componentes no campos acima para inserir: Nome, Calorias Totais, Gordura, Carboidratos e Proteínas.
@@ -70,6 +71,7 @@
 
     Tarefas e responsáveis:
     
+    - Criar tabela de dados para contagem de consumos.
     - Criar componente para inserir o limite diário
     - Criar lógica para somar as calorias registradas no dia e apresentar junto com o limite
     - Tornar possível atualizar o limite diário.
