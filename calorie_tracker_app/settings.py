@@ -26,6 +26,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'user_api',
+    'food_api',
     'rest_framework',
     'knox',
     'corsheaders',
