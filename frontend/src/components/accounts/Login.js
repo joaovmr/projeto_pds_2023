@@ -52,7 +52,7 @@ const Login = (props) => {
                             Login
                         </Button>
                     </Form>
-                </Card.Body>X
+                </Card.Body>
             </Card>
         )
     }
