@@ -49,4 +49,75 @@ function convertToWeightDataSet(arr){
     return dataSet
 }
 
+const Statistics = () => {
+    const auth = useSelector(state => state.auth)
+    const [calorieLineState,updateCalorieLineState] = useState()
+    const [weightLineState,updateWeightLineState] = useState()
+    const [isLoading,setIsLoading] = useState(true)
+    
+
+    useEffect(()=>{
+        const config = {
+            headers:{
+                'Content-Type':'application/json',
+                'Authorization':`Token ${auth.token}`
+            }
+        }
+        axios.get('http://localhost:8000/api/30-day-calories',config)
+        .then(res=>{
+            updateCalorieLineState(convertToDataSet(res.data.data))
+            
+        })
+
+        axios.get('http://localhost:8000/api/user/30-day-weight',config)
+        .then(res=>{
+            updateWeightLineState(convertToWeightDataSet(res.data.data))
+            setIsLoading(false)
+        })
+
+    },[])
+
+    return (
+        <>
+            {isLoading ? <div>Carregando...</div>:
+            <Container className="mt-3">
+                <Row>
+                    <Col>
+                        <Line 
+                            data= {calorieLineState}
+                            options = {{
+                                title:{
+                                    display:true,
+                                    text:'Consumo calórico diário',
+                                    fontSize:20,
+                                },
+                                scales:{
+                                    yAxes:[{
+                                        ticks:{
+                                            beginAtZero:true
+                                        }
+                                    }]
+                                }
+                            }}
+                        />
+                    </Col>
+                    <Col>
+                        <Line 
+                            data= {weightLineState}
+                            options = {{
+                                title:{
+                                    display:true,
+                                    text:'Peso diário',
+                                    fontSize:20,
+                                },
+                            }}
+                        />
+                    </Col>
+                </Row>
+            </Container>
+            }
+        </>
+    )
+}
+
 export default Statistics
