@@ -36,6 +36,7 @@ const CreateFoodForm = (props) => {
             [e.target.id]:e.target.value
         })
     }
+
 }
 
 export default CreateFoodForm
