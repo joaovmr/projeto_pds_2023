@@ -39,6 +39,42 @@ const EditFoodForm = (props) => {
         })
     }
 
+    return (
+        <tr>
+        
+            <td>
+                <Form.Control size="sm" id="name" type="name" value={formData.name} placeholder="Alimento" onChange={(e) => updateFoodInput(e)}/> 
+            </td>
+
+            <td>
+                <Form.Control id="total_calories" size="sm" type="totalCalories" value={formData.total_calories} placeholder="Cals" onChange={(e) => updateFoodInput(e)}/> 
+            </td>
+
+            <td>    
+                <Form.Control id="fat" size="sm" type="fat" value={formData.fat} placeholder="Gord (g)" onChange={(e) => updateFoodInput(e)}/>
+            </td>
+
+            <td>
+                <Form.Control size="sm" id="protein" type="protein" value={formData.protein} placeholder="Prot (g)" onChange={(e) => updateFoodInput(e)}/>
+            </td>
+
+            <td>
+                <Form.Control size="sm" id="carbs" type="carbs" value={formData.carbs} placeholder="Carb (g)" onChange={(e) => updateFoodInput(e)}/>
+            </td>
+
+            <td>
+                <Button variant="success" type="submit" size="sm" onClick={submitFood}>
+                    Editar
+                </Button>
+
+                <Button variant="danger" size="sm" onClick={()=>props.onClickCancel(original)}>
+                    Cancelar
+                </Button>    
+            </td>
+        </tr>
+
+
+    )
 }
 
 export default EditFoodForm
