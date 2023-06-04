@@ -36,6 +36,31 @@ const Breakfast = (props) => {
             )
         })
     }
+    
+    return (
+    <>
+        <div>Café da manhã</div>
+           
+            <Table  striped bordered hover responsive size="lg">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Calorias</th>
+                        <th>Carboidratos</th>
+                        <th>Gordura</th>
+                        <th>Proteina</th>
+                        <th></th>
+                    </tr>
+                    
+                </thead>
+                <tbody>
+                    <CreateFoodForm category="B"/>
+                    {renderBreakfastList(breakfastList)}
+                    
+                </tbody>
+            </Table>
+    </>
+    )
 }
 
 

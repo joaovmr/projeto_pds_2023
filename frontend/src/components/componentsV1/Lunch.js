@@ -18,7 +18,6 @@ const Lunch = (props) => {
     const updateFood = (food) => {
         dispatch(deleteFood(food))
     }
-    
     const renderLunchList = (lunchList) => {
         return lunchList.map(lunch =>{
             return (
@@ -36,6 +35,27 @@ const Lunch = (props) => {
             )
         })
     }
+    return (
+    <>
+        <div>Almoço</div>
+        <Table striped bordered hover size="sm">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Calorias</th>
+                    <th>Carboidratos</th>
+                    <th>Gorduras</th>
+                    <th>Proteinas</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <CreateFoodForm category="L"/>
+                {renderLunchList(lunchList)}
+            </tbody>
+        </Table>
+    </>
+    )
 }
 
 

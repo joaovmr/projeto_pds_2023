@@ -7,6 +7,8 @@ import CreateFoodForm from './forms/CreateFoodForm'
 import {faTrash,faEdit} from '@fortawesome/free-solid-svg-icons'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 
+
+
 const Snacks = (props) => {
     const snacks = useSelector(state => state.nutrition.snacks)
     const dispatch = useDispatch()
@@ -17,6 +19,7 @@ const Snacks = (props) => {
 
     const updateFood = (food) => {
         dispatch(deleteFood(food))
+        
     }
     
     const renderSnackList = (snacks) => {
@@ -36,6 +39,28 @@ const Snacks = (props) => {
             )
         })
     }
+    return (
+        <>
+            <div>Lanches</div>
+            <Table striped bordered hover size="sm">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Calorias</th>
+                        <th>Carboidratos</th>
+                        <th>Gorduras</th>
+                        <th>Proteinas</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <CreateFoodForm category="S"/>
+                    {renderSnackList(snacks)}
+                </tbody>
+            </Table>
+        </>
+    
+    )
 }
 
 

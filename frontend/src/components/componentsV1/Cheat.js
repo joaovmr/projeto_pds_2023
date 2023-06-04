@@ -17,6 +17,7 @@ const Cheat = (props) => {
     
     const updateFood = (food) => {
         dispatch(deleteFood(food))
+        
     }
     
     const renderCheatList = (cheatList) => {
@@ -36,6 +37,27 @@ const Cheat = (props) => {
             )
         })
     }
+    return (
+        <>
+            <div>Cheat</div>
+            <Table striped bordered hover size="sm">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Calories</th>
+                        <th>Carbs</th>
+                        <th>Fat</th>
+                        <th>Protein</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <CreateFoodForm category="C"/>
+                    {renderCheatList(cheatList)}
+                </tbody>
+            </Table>
+        </>
+    )
 }
 
 
