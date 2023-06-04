@@ -11,7 +11,7 @@ class Alerts extends React.Component {
         const {error,alert} = this.props
         if (error !== prevProps.error){
             if (error.msg.non_field_errors){
-                alert.error(`Erro no login: ${error.msg.non_field_errors.join()}`)
+                alert.error(`Erro no login`)
             }
             if(error.msg.username){
                 alert.error(`Erro no cadastro: ${error.msg.username.join()}`)
@@ -20,10 +20,10 @@ class Alerts extends React.Component {
                 alert.error(`Erro no cadastro do alimento: Somente dados inteiros são aceitos para os campos Calorias, Gordura, Proteína e Carboidratos`)
             }
             if(error.msg.number){
-                alert.error(`Erro na atualização do peso: ${error.msg.number.join()}`)
+                alert.error(`Erro na atualização do peso: o valor deve ser numérico`)
             }
             if(error.msg.daily_calories){
-                alert.error(`Erro na atualização de calorias: ${error.msg.daily_calories.join()}`)
+                alert.error(`Erro na atualização de calorias: o valor deve ser numérico`)
             }
         }
     }

@@ -161,7 +161,7 @@ export const editFood = (foodItem,original) => (dispatch,getState) => {
     const protein =  foodItem.protein - original.protein
     const carbs = foodItem.carbs - original.carbs
 
-    axios.put(foodLogUrl+original.id,body,config)
+    axios.put(foodLogUrl+original.id + '/',body,config)
     .then(res =>{
         dispatch({
             type:EDIT_FOOD,
@@ -262,10 +262,10 @@ export const updateUserWeight = (weight) => (dispatch,getState) => {
     const body = JSON.stringify({"number":weight})
     axios.post('http://localhost:8000/api/user/weight',body,config)
     .then(res =>{
-        console.log(res.data)
+        console.log(res.data.weight.number)
         dispatch({
             type:UPDATE_WEIGHT,
-            payload:res.data.data
+            payload:res.data.weight.number
         })
     }).catch(err =>{
         const errors = {

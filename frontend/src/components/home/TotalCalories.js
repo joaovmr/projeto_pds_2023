@@ -1,21 +1,21 @@
 import React,{useEffect} from 'react'
 import {Container,Row,Col,Card} from 'react-bootstrap'
 import {useSelector,useDispatch} from 'react-redux'
-import {getCalories} from '../../actions/nutrition'
+import {getCalories, getUserWeight} from '../../actions/nutrition'
 import {Doughnut} from 'react-chartjs-2'
 
 const TotalCalories = () => {
     const auth = useSelector(state=>state.auth)
     const total = useSelector(state => state.nutrition.calories)
+    const nutrition = useSelector(state => state.nutrition)
+
     const dispatch= useDispatch()
 
     useEffect(()=>{
         if (auth.isAuthenticated){
             dispatch(getCalories())
-        } else {
-            console.log("Nah")
-        }
-
+            dispatch(getUserWeight())
+        } 
     },[])
 
     const dataSet = {
@@ -33,15 +33,14 @@ const TotalCalories = () => {
         ]
 
     }
-
     return(
         <>
             <Container fluid className="mt-3">
                 <Row>
                     <Col xs={12} md={{span:6,offset:2}}>
                         <Card body className="border-0">
-                            <Row>
-                                <Doughnut
+                            <Row>   
+                                <Doughnut 
                                     data={dataSet}
                                     height={200}
                                     options={{
@@ -49,7 +48,7 @@ const TotalCalories = () => {
                                             display:true,
                                             text:"Divisão de macros de hoje",
                                             fontSize:20
-
+                                        
                                         },
                                         legend:{
                                             display:true,
@@ -57,20 +56,27 @@ const TotalCalories = () => {
                                         },
                                         maintainAspectRatio:false
                                     }}
-
-
                                 />
                             </Row>
                         </Card>
-
                     </Col>
 
                     <Col xs={12} md={{span:2,offset:1}}>
                         <Card body className="text-center">
-                            <h4>Total de calorias diárias</h4>
-                            <h6>{total.total ? total.total:0}</h6>
-                            <hr style={{width:"4rem"}} />
+                            <div>
+                            <h4>Calorias de hoje</h4>
+                            <h6>{total.total ? total.total : 0}</h6>
+                            </div>
+                            <hr style={{ width: "3rem" }} />
+                            <div>
+                            <h4>Meta diária</h4>
                             <h6>{auth.userCalorieGoal.daily_calories}</h6>
+                            </div>
+                            <hr style={{ width: "3rem" }} />
+                            <div>
+                            <h4>Peso atual</h4>
+                            <h6>{nutrition.user_weight}</h6>
+                            </div>
                         </Card>
                     </Col>
                 </Row>

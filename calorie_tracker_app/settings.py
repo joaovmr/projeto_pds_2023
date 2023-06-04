@@ -46,9 +46,13 @@ MIDDLEWARE = [
 ROOT_URLCONF = 'calorie_tracker_app.urls'
 
 REST_FRAMEWORK = {
-    'DEFAULT_AUTHENTICATION_CLASSES':('knox.auth.TokenAuthentication',),
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'knox.auth.TokenAuthentication',
+    ],
     'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema',
-    }
+    'APPEND_SLASH': False,  
+}
+
     
 TEMPLATES = [
     {

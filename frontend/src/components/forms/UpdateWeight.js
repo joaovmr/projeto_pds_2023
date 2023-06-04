@@ -11,8 +11,9 @@ const UpdateWeightForm = () =>{
     const onWeightUpdate = (e) => {
         e.preventDefault()
         dispatch(updateUserWeight(updatedWeight))
-        setUpdatedWeight("")
+        dispatch(getUserWeight())
     }
+
     return (
         <>
             <Card body>
