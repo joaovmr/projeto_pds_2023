@@ -3,51 +3,61 @@ import {useSelector} from 'react-redux'
 import axios from 'axios'
 import {Container,Row,Col} from 'react-bootstrap'
 import {Line} from 'react-chartjs-2';
+import moment from 'moment';
 
-
-function convertToDataSet(arr){
+function convertToDataSet(arr) {
     var xLabel;
     var yLabel;
-    xLabel = arr.map(p => p.date_eaten)
-    yLabel = arr.map(p => p.totalCalories)
+    xLabel = arr.map(p => {
+        const dateRecorded = moment.utc(p.date_eaten).local().add(1, 'day');
+        return dateRecorded.format('DD/MM/YYYY');
+      });
+    yLabel = arr.map(p => p.totalCalories);
     const dataSet = {
-        labels: xLabel,
-        datasets: [
-            {
-            label: 'Total de calorias',
-            fill: false,
-            lineTension: 0.5,
-            backgroundColor: 'rgba(75,192,192,1)',
-            borderColor: 'rgba(0,0,0,1)',
-            borderWidth: 2,
-            data: yLabel
-            }
-        ]
-    }
-    return dataSet
+      labels: xLabel,
+      datasets: [
+        {
+          label: 'Total de calorias',
+          fill: false,
+          lineTension: 0.5,
+          backgroundColor: 'rgba(75,192,192,1)',
+          borderColor: 'rgba(0,0,0,1)',
+          borderWidth: 2,
+          data: yLabel
+        }
+      ]
+    };
+    return dataSet;
+  }
+  
+
+
+function convertToWeightDataSet(arr) {
+  var xLabel;
+  var yLabel;
+  xLabel = arr.map(p => {
+    const dateRecorded = moment.utc(p.date_recorded).local().add(1, 'day');
+    return dateRecorded.format('DD/MM/YYYY');
+  });
+  yLabel = arr.map(p => p.number);
+  const dataSet = {
+    labels: xLabel,
+    datasets: [
+      {
+        label: 'Peso (kg)',
+        fill: false,
+        lineTension: 0.5,
+        backgroundColor: 'rgba(75,192,192,1)',
+        borderColor: 'rgba(0,0,0,1)',
+        borderWidth: 2,
+        data: yLabel
+      }
+    ]
+  };
+  return dataSet;
 }
 
-function convertToWeightDataSet(arr){
-    var xLabel;
-    var yLabel;
-    xLabel = arr.map(p => p.date_recorded)
-    yLabel = arr.map(p => p.number)
-    const dataSet = {
-        labels: xLabel,
-        datasets: [
-            {
-            label: 'Weight (lbs)',
-            fill: false,
-            lineTension: 0.5,
-            backgroundColor: 'rgba(75,192,192,1)',
-            borderColor: 'rgba(0,0,0,1)',
-            borderWidth: 2,
-            data: yLabel
-            }
-        ]
-    }
-    return dataSet
-}
+  
 
 const Statistics = () => {
     const auth = useSelector(state => state.auth)
