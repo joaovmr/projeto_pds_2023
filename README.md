@@ -109,3 +109,15 @@
 
 
 Figma: https://www.figma.com/file/pygWS33qHgJxosSavF5Wvh/Figma-Sprint-1?node-id=103%3A179&t=FiWYzXplnfhlxxCY-1
+
+### Arquitetura
+
+A aplicação não utiliza do padrão hexagonal aqui estão alguns motivos:
+
+Integração direta com o framework Django: A aplicação possui dependências diretas e acoplamento com os componentes do framework Django, como views, serializers e modelos. A arquitetura hexagonal visa isolar a lógica de negócios central da infraestrutura, mas nesse caso,está sendo diretamente os componentes fornecidos pelo Django, o que cria um acoplamento com o framework.
+
+Lógica de banco de dados nos modelos: Nos modelos do Django, são definidas a estrutura e os relacionamentos do banco de dados, o que significa que a lógica de persistência e acesso aos dados está intrinsecamente ligada a eles. Na arquitetura hexagonal, essa lógica de acesso a dados é isolada em portas e adaptadores, permitindo que a lógica de negócios seja independente da tecnologia de armazenamento de dados.
+
+Acesso direto a APIs externas: Na aplicação, as chamadas à da Food API são feitas diretamente, sem uma separação clara de portas e adaptadores. Na arquitetura hexagonal, as interações com sistemas externos, como APIs, são encapsuladas em portas e adaptadores, permitindo que a lógica de negócios não dependa diretamente desses sistemas externos.
+
+Ausência de interfaces explícitas: A arquitetura hexagonal enfatiza a definição de interfaces claras para as portas, permitindo que os adaptadores sejam substituídos facilmente. No código atual, não há uma definição explícita de interfaces para as portas e adaptadores, o que dificulta a substituição e o isolamento desses componentes.
