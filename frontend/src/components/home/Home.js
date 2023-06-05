@@ -2,11 +2,13 @@ import React from 'react'
 import {Container,Col,Row,Button} from 'react-bootstrap'
 import {connect} from 'react-redux'
 import {getProfileData} from '../../actions/auth'
+import {getUserWeight} from '../../actions/nutrition'
 import UpdateWeight from '../forms/UpdateWeight'
 import UpdateCalorieGoal from '../forms/UpdateCalorieGoal'
 import DailyFoodLog from './DailyFoodLog'
 import TotalCalories from './TotalCalories'
 import Staistics from '../statistics/Statistics'
+
 
 
 class Home extends React.Component {
@@ -47,8 +49,8 @@ class Home extends React.Component {
                         </Row>
 
                         <Row>
-
-                            {this.state.hideStatistics ?
+                            
+                            {this.state.hideStatistics ? 
                             <>
                             <Col xs={12} s={12} md={{span:6,offset:2}}>
                                 <DailyFoodLog />
@@ -68,8 +70,9 @@ class Home extends React.Component {
 
 const mapStateToProps = (state) => {
     return {
-        auth:state.auth
+        auth:state.auth,
+        nutrition: state.nutrition.user_weight
     }
 }
 
-export default connect(mapStateToProps,{getProfileData})(Home)
+export default connect(mapStateToProps,{getProfileData, getUserWeight})(Home)
